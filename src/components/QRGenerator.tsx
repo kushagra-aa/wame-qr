@@ -47,7 +47,13 @@ function QRGenerator() {
           htmlFor={OPTIONS_MAP[0]}
         >
           {OPTIONS_MAP[0]}
-          <input type="radio" id={OPTIONS_MAP[0]} name="option" value={0} />
+          <input
+            defaultChecked
+            type="radio"
+            id={OPTIONS_MAP[0]}
+            name="option"
+            value={0}
+          />
         </label>
         <label
           className="flex gap-1 leading-[100%] items-end px-2 py-2 hover:bg-[rgba(104,104,104,0.1)] cursor-pointer"
@@ -83,7 +89,16 @@ function QRGenerator() {
         generate
       </button>
       <div className="flex flex-col items-center justify-center gap-2 mt-2 qr-container">
-        {QRURL && <QRCode value={QRURL} style={{ fill: "red" }} />}
+        {QRURL && (
+          <QRCode
+            value={QRURL}
+            style={{
+              padding: "0.1rem",
+              background: "#fefefe",
+              border: "3px solid teal",
+            }}
+          />
+        )}
         <p className="text-teal-600 url">{QRURL}</p>
       </div>
     </form>
