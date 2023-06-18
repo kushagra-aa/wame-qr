@@ -1,10 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home Page">
-	<main>
-		<a href="/play">try it out!</a>
+	<main class="flex items-center justify-center">
+		<a
+			class="px-2 text-2xl text-teal-400 capitalize border-b border-teal-400 cursor-pointer focus:outline-none border-1 focus:border-teal-200 focus:text-teal-300"
+			href="/play">try it out!</a
+		>
 	</main>
 </Layout>
 
+<style>
+	main {
+		min-height: 100vh;
+		width: inherit;
+	}
+</style>

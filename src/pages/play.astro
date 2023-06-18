@@ -1,9 +1,17 @@
 ---
+import QRGenrator from "../components/QRGenerator";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="QR Genrator">
-    <main>
-        <h1>hello</h1>
+    <main class="flex items-center justify-center">
+        <QRGenrator client:load />
     </main>
 </Layout>
+
+<style>
+    main {
+        min-height: 100vh;
+        width: inherit;
+    }
+</style>
