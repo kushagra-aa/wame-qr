@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import QRCode from "react-qr-code";
 
 const makeWhatsAppURL = (phone: string) => `http://wa.me/${phone}/`;
-const makePhoneURL = (phone: string) => `tel:${phone}/`;
+const makePhoneURL = (phone: string) => `tel:${phone}`;
 
 const OPTIONS_MAP = {
   0: "WhatsApp",
@@ -99,7 +99,9 @@ function QRGenerator() {
             }}
           />
         )}
-        <p className="text-teal-600 url">{QRURL}</p>
+        <a className="text-teal-600 border-b border-teal-500 cursor-pointer url hover:border-teal-300">
+          {QRURL}
+        </a>
       </div>
     </form>
   );
