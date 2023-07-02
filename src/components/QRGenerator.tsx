@@ -19,6 +19,10 @@ const QR_THEMES = [
     bgColor: "#FFFFFF",
     fgColor: "#000000",
   },
+  {
+    bgColor: "#000000",
+    fgColor: "#FFFFFF",
+  },
 ];
 
 function QRGenerator() {
@@ -103,11 +107,6 @@ function QRGenerator() {
           <img className="w-10" src="/Web Icon.png" alt="" />
         </button>
       </div>
-      <div className="flex gap-2 border-b border-teal-400 items-center justify-center pb-2">
-        <button onClick={() => setSelectedTheme(0)}>1</button>
-        <button onClick={() => setSelectedTheme(1)}>2</button>
-        <button onClick={() => setSelectedTheme(2)}>3</button>
-      </div>
       {options[selectedOption]}
       <div className="flex flex-col items-center justify-center gap-2 mt-2 qr-container">
         {QRURL && (
@@ -128,6 +127,30 @@ function QRGenerator() {
         )}
         {linkURL ? (
           <>
+            <div className="flex flex-col gap-1 border-b border-teal-400 items-center justify-center pb-2 w-full">
+              <p className="text-teal-400 capitalize">themes:</p>
+              <div className="flex items-center justify-evenly w-full">
+                {QR_THEMES.map((theme, i) => (
+                  <button
+                    className={`btn flex w-14 h-14 items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
+                      selectedTheme === i
+                        ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
+                        : ""
+                    }`}
+                    onClick={() => setSelectedTheme(i)}
+                  >
+                    <span
+                      className="flex-1 w-1/2 h-full"
+                      style={{ background: theme.bgColor }}
+                    ></span>
+                    <span
+                      className="flex-1 w-1/2 h-full"
+                      style={{ background: theme.fgColor }}
+                    ></span>
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="flex gap-1">
               <>
                 <p>Link:</p>
