@@ -23,6 +23,14 @@ const QR_THEMES = [
     bgColor: "#000000",
     fgColor: "#FFFFFF",
   },
+  {
+    bgColor: "#020A24",
+    fgColor: "#E75151",
+  },
+  {
+    bgColor: "#0F0224",
+    fgColor: "#2391FF",
+  },
 ];
 
 function QRGenerator() {
@@ -127,12 +135,12 @@ function QRGenerator() {
         )}
         {linkURL ? (
           <>
-            <div className="flex flex-col gap-1 border-b border-teal-400 items-center justify-center pb-2 w-full">
+            <div className="flex flex-col gap-1 border-b border-teal-400 items-start justify-center pb-2 w-full">
               <p className="text-teal-400 capitalize">themes:</p>
               <div className="flex items-center justify-evenly w-full">
                 {QR_THEMES.map((theme, i) => (
                   <button
-                    className={`btn flex w-14 h-14 items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
+                    className={`btn flex  w-12 h-8 items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
                       selectedTheme === i
                         ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
                         : ""
