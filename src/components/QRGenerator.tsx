@@ -6,6 +6,21 @@ import PhoneForm from "./forms/PhoneForm";
 import ContactForm from "./forms/ContactForm";
 import { saveSvgAsPng } from "save-svg-as-png";
 
+const FORM_OPTIONS = [
+  {
+    img: "/Wahtsapp Icon.png",
+  },
+  {
+    img: "/Phone Icon.png",
+  },
+  {
+    img: "/Contact Card Icon.png",
+  },
+  {
+    img: "/Web Icon.png",
+  },
+];
+
 const QR_THEMES = [
   {
     bgColor: "#2dd4bf",
@@ -44,6 +59,11 @@ function QRGenerator() {
     if (isLink) setLinkURL(url);
     setQRURL(url);
   };
+  const handleOptionSelect = (i: number) => {
+    setSelectedOption(i);
+    setQRURL(undefined);
+    setLinkURL(undefined);
+  };
   const handleCopy = () => {
     navigator.clipboard.writeText(linkURL);
   };
@@ -67,53 +87,19 @@ function QRGenerator() {
   return (
     <div className="grid items-start justify-center h-[500px] w-[600px]">
       <div className="flex gap-2 border-b border-teal-400 items-center justify-center pb-2">
-        <button
-          onClick={() => setSelectedOption(0)}
-          title="WhatsApp"
-          className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
-            selectedOption === 0
-              ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
-              : ""
-          }`}
-        >
-          <img className="w-10" src="/Wahtsapp Icon.png" alt="" />
-        </button>
-
-        <button
-          onClick={() => setSelectedOption(1)}
-          title="Phone"
-          className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
-            selectedOption === 1
-              ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
-              : ""
-          }`}
-        >
-          <img className="w-10" src="/Phone Icon.png" alt="" />
-        </button>
-
-        <button
-          onClick={() => setSelectedOption(2)}
-          title="Contact Card"
-          className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
-            selectedOption === 2
-              ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
-              : ""
-          }`}
-        >
-          <img className="w-10" src="/Contact Card Icon.png" alt="" />
-        </button>
-
-        <button
-          onClick={() => setSelectedOption(3)}
-          title="URL"
-          className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
-            selectedOption === 3
-              ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
-              : ""
-          }`}
-        >
-          <img className="w-10" src="/Web Icon.png" alt="" />
-        </button>
+        {FORM_OPTIONS.map((option, i) => (
+          <button
+            onClick={() => handleOptionSelect(i)}
+            title="WhatsApp"
+            className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
+              selectedOption === i
+                ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
+                : ""
+            }`}
+          >
+            <img className="w-10" src={option.img} alt="" />
+          </button>
+        ))}
       </div>
       {options[selectedOption]}
       <div className="flex flex-col items-center justify-center gap-2 mt-2 qr-container">
@@ -140,10 +126,8 @@ function QRGenerator() {
               <div className="flex items-center justify-evenly w-full">
                 {QR_THEMES.map((theme, i) => (
                   <button
-                    className={`btn flex  w-12 h-8 items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
-                      selectedTheme === i
-                        ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
-                        : ""
+                    className={`btn flex  w-12 h-8 items-center justify-center border-teal-500 border-2 rounded-sm hover:border-teal-700 hover:bg-opacity-10 ${
+                      selectedTheme === i ? "border-teal-300" : ""
                     }`}
                     onClick={() => setSelectedTheme(i)}
                   >
