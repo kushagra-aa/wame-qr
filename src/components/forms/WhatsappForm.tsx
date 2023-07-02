@@ -20,14 +20,14 @@ function WhatsappForm({
     >
       <div className="flex items-center border-b border-teal-500 py-0.5">
         <label className="flex justify-end gap-1" htmlFor="inputUrl">
-          URL:
+          Whatsapp Number:
           <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-3/5 text-gray-700 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
             name="inputUrl"
             id="inputUrl"
             type="tel"
-            placeholder="Enter URL"
+            placeholder="Enter Number"
           />
         </label>
       </div>
