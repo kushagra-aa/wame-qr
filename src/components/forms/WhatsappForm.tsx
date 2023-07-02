@@ -24,6 +24,7 @@ function WhatsappForm({
           <input
             className="appearance-none bg-transparent border-none w-3/5 text-gray-700 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
+            pattern="(5|6|7|8|9)\d{9}"
             name="inputUrl"
             id="inputUrl"
             type="tel"
