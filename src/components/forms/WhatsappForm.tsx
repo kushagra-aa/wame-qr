@@ -9,7 +9,7 @@ function WhatsappForm({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setURL(`http://wa.me/${formRef.current.inputURL.value}/`, true);
+    setURL(`http://wa.me/${formRef.current.inputUrl.value}/`, true);
   };
 
   return (
