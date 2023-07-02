@@ -72,6 +72,7 @@ function ContactForm({
           <input
             className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
+            pattern="(5|6|7|8|9)\d{9}"
             name="phone"
             id="phone"
             type="tel"
