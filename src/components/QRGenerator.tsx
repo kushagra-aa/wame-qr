@@ -4,7 +4,9 @@ import WhatsappForm from "./forms/WhatsappForm";
 import UrlForm from "./forms/UrlForm";
 import PhoneForm from "./forms/PhoneForm";
 import ContactForm from "./forms/ContactForm";
-import { saveSvgAsPng } from "save-svg-as-png";
+import Sv from "save-svg-as-png";
+
+const saveSvgAsPng = Sv.saveSvgAsPng;
 
 const FORM_OPTIONS = [
   {
