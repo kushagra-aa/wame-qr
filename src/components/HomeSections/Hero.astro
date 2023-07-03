@@ -27,7 +27,7 @@
             </a>
         </div>
     </div>
-    <div class="">
+    <div class="hero-image">
         <img
             class="animate-spin-real-slow duration-75"
             src="/hero.png"
@@ -35,3 +35,35 @@
         />
     </div>
 </section>
+
+<style>
+    @media screen and (max-width: 620px) {
+        #hero {
+            @apply items-start;
+        }
+        #hero h1 {
+            @apply text-4xl w-4/5;
+        }
+        #hero p {
+            @apply text-xl;
+        }
+        #hero > div {
+            @apply w-full;
+            flex: 1;
+        }
+        #hero > div > div > a {
+            @apply text-sm px-4 py-1;
+        }
+        #hero > .hero-image {
+            @apply relative;
+            max-width: 60px;
+        }
+        #hero > .hero-image > img {
+            @apply absolute top-0;
+            left: -4rem;
+            max-width: 230px;
+            height: 230px;
+            object-fit: contain;
+        }
+    }
+</style>

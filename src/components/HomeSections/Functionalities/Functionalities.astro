@@ -5,7 +5,7 @@ import Card from "./Card.astro";
 
 <section id="functionalities w-full">
     <SectionTitle>functionalities</SectionTitle>
-    <div class="grid grid-cols-2 gap-5 py-8">
+    <div class="cards grid grid-cols-2 gap-5 py-8">
         <Card
             title="WhatsApp numbers"
             description="Easily create QR codes and links for WhatsApp numbers, enabling seamless communication with your contacts."
@@ -28,3 +28,11 @@ import Card from "./Card.astro";
         />
     </div>
 </section>
+
+<style>
+    @media screen and (max-width: 620px) {
+        .cards {
+            @apply !flex flex-col;
+        }
+    }
+</style>
