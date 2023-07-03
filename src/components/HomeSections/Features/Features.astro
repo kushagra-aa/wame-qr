@@ -1,0 +1,32 @@
+---
+import SectionTitle from "../../SectionTitle.astro";
+import Card from "./Card.astro";
+---
+
+<section id="features" class="w-full flex flex-col gap-8">
+    <SectionTitle>features</SectionTitle>
+    <div class="flex flex-col gap-5 w-[90%] self-end">
+        <Card>
+            Quickly
+            <span class="text-teal-400 capitalize font-medium">download</span>
+            the generated QR code in a high-quality image format for offline use
+            or printing.
+        </Card>
+        <Card>
+            <span class="text-teal-400 capitalize font-medium">Copy</span>
+            the generated link for WhatsApp and mobile numbers with a single click,
+            simplifying sharing with others.
+        </Card>
+        <Card>
+            Choose from a range of pre-defined
+            <span class="text-teal-400 capitalize font-medium"
+                >color themes</span
+            >
+            to style your QR codes.
+        </Card>
+        <Card>
+            <span class="text-teal-400 capitalize font-medium">Customize</span>
+            the colors of your QR codes to match your branding or personal preferences.
+        </Card>
+    </div>
+</section>
