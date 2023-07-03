@@ -1,0 +1,31 @@
+<nav>
+    <a href="#hero" class="logo">WaMeQR</a>
+    <div class="nav-items">
+        <a href="#hero" class="nav-item">home</a>
+        <a href="#fetaures" class="nav-item">features</a><a
+            href="#useage"
+            class="nav-item">useage</a
+        >
+        <a href="/play" class="nav-item try-btn">try it out!</a>
+    </div>
+</nav>
+
+<style>
+    nav {
+        @apply bg-teal-200 flex items-center justify-between px-20 py-4;
+    }
+
+    .logo {
+        @apply text-gray-950 text-2xl cursor-pointer;
+    }
+
+    .nav-items {
+        @apply flex gap-8;
+    }
+    .nav-item {
+        @apply text-gray-950 uppercase font-medium text-lg;
+    }
+    .try-btn {
+        @apply text-teal-500 font-bold;
+    }
+</style>

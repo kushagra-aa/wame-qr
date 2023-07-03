@@ -1,0 +1,15 @@
+<div class="card">
+    <p><slot /></p>
+</div>
+
+<style>
+    .card {
+        @apply grid bg-teal-100 bg-opacity-10 px-2 py-2 rounded-md items-center w-full;
+    }
+    .card > p {
+        @apply text-teal-100 text-lg font-light;
+    }
+    .card > p > span {
+        @apply text-teal-400;
+    }
+</style>

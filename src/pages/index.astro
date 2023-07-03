@@ -1,18 +1,29 @@
 ---
+import Nav from "../components/Nav.astro";
+import Hero from "../components/HomeSections/Hero.astro";
+import Functionalities from "../components/HomeSections/Functionalities/Functionalities.astro";
+import Features from "../components/HomeSections/Features/Features.astro";
+import Try from "../components/HomeSections/Try.astro";
+import Powered from "../components/HomeSections/Powered.astro";
+import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home Page">
-	<main class="flex items-center justify-center">
-		<a
-			class="px-2 text-2xl text-teal-400 capitalize border-b border-teal-400 cursor-pointer focus:outline-none border-1 focus:border-teal-200 focus:text-teal-300"
-			href="/play">try it out!</a
-		>
+	<Nav />
+	<main class="">
+		<Hero />
+		<Functionalities />
+		<Features />
+		<Try />
+		<Powered />
 	</main>
+	<Footer />
 </Layout>
 
 <style>
 	main {
+		@apply px-20 flex flex-col items-start py-20 gap-8;
 		min-height: 100vh;
 		width: inherit;
 	}
