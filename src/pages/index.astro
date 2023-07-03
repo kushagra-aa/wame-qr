@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Home Page">
 	<Nav />
-	<main class="flex items-center justify-center">
+	<main class="flex items-start py-20">
 		<Hero />
 		<Functionalities />
 		<Features />
@@ -23,6 +23,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
 	main {
+		@apply px-20;
 		min-height: 100vh;
 		width: inherit;
 	}
