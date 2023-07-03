@@ -23,4 +23,17 @@ const { title, description, image } = Astro.props;
     .card > p {
         @apply text-teal-100 text-lg font-light;
     }
+    @media screen and (max-width: 620px) {
+        .card {
+            @apply px-2 py-1;
+            grid-template-columns: 36px auto;
+            gap: 2px 12px;
+        }
+        .card > h6 {
+            @apply text-xl;
+        }
+        .card > p {
+            @apply text-sm;
+        }
+    }
 </style>

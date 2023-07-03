@@ -3,7 +3,7 @@
     <div class="nav-items">
         <a href="#hero" class="nav-item">home</a>
         <a href="#fetaures" class="nav-item">features</a><a
-            href="#useage"
+            href="#try"
             class="nav-item">useage</a
         >
         <a href="/play" class="nav-item try-btn">try it out!</a>
@@ -27,5 +27,23 @@
     }
     .try-btn {
         @apply text-teal-500 font-bold;
+    }
+
+    @media screen and (max-width: 620px) {
+        nav {
+            @apply px-6 py-2;
+        }
+        .logo {
+            @apply text-xl;
+        }
+        .nav-items {
+            @apply gap-4;
+        }
+        .nav-item {
+            @apply text-base;
+        }
+        .try-btn {
+            display: none;
+        }
     }
 </style>
