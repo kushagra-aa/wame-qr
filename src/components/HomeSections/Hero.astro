@@ -37,6 +37,17 @@
 </section>
 
 <style>
+    #hero > .hero-image {
+        @apply relative;
+        width: 60px;
+    }
+    #hero > .hero-image > img {
+        @apply absolute top-0;
+        left: -4rem;
+        max-width: 350px;
+        height: 350px;
+        object-fit: contain;
+    }
     @media screen and (max-width: 620px) {
         #hero {
             @apply items-start;
@@ -54,16 +65,10 @@
         #hero > div > div > a {
             @apply text-sm px-4 py-1;
         }
-        #hero > .hero-image {
-            @apply relative;
-            max-width: 60px;
-        }
         #hero > .hero-image > img {
-            @apply absolute top-0;
-            left: -4rem;
-            max-width: 230px;
-            height: 230px;
-            object-fit: contain;
+            left: 0;
+            max-width: 200px;
+            height: 200px;
         }
     }
 </style>
