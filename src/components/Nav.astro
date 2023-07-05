@@ -1,20 +1,25 @@
 <nav>
-    <a href="#hero" class="logo">WaMeQR</a>
-    <div class="nav-items">
-        <a href="#hero" class="nav-item">home</a>
-        <a href="#fetaures" class="nav-item">features</a><a
-            href="#try"
-            class="nav-item">useage</a
-        >
-        <a href="/play" class="nav-item try-btn">try it out!</a>
+    <div class="nav-container">
+        <a href="#hero" class="logo">WaMeQR</a>
+        <div class="nav-items">
+            <a href="#hero" class="nav-item">home</a>
+            <a href="#fetaures" class="nav-item">features</a><a
+                href="#try"
+                class="nav-item">useage</a
+            >
+            <a href="/play" class="nav-item try-btn">try it out!</a>
+        </div>
     </div>
 </nav>
 
 <style>
     nav {
-        @apply bg-teal-200 flex items-center justify-between px-20 py-4;
+        @apply bg-teal-200  w-full grid justify-items-center;
     }
 
+    .nav-container {
+        @apply max-w-screen-2xl flex items-center justify-between px-20 py-4 w-full;
+    }
     .logo {
         @apply text-gray-950 text-2xl cursor-pointer;
     }
@@ -30,7 +35,7 @@
     }
 
     @media screen and (max-width: 620px) {
-        nav {
+        .nav-container {
             @apply px-6 py-2;
         }
         .logo {
