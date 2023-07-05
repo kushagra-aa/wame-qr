@@ -87,7 +87,7 @@ function QRGenerator() {
   ];
 
   return (
-    <div className="grid items-start justify-center h-[500px] w-[600px]">
+    <div className="grid items-start justify-center py-4">
       <div className="flex gap-2 border-b border-teal-400 items-center justify-center pb-2">
         {FORM_OPTIONS.map((option, i) => (
           <button
@@ -121,7 +121,7 @@ function QRGenerator() {
             />
           </div>
         )}
-        {linkURL ? (
+        {QRURL ? (
           <>
             <div className="flex flex-col gap-1 border-b border-teal-400 items-start justify-center pb-2 w-full">
               <p className="text-teal-400 capitalize">themes:</p>
