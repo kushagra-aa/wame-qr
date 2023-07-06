@@ -93,9 +93,9 @@ function QRGenerator() {
           <button
             onClick={() => handleOptionSelect(i)}
             title="WhatsApp"
-            className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-teal-200 hover:bg-opacity-10 ${
+            className={`btn w-14 h-14 grid items-center justify-center border-teal-500 border-2 rounded-md hover:bg-accent hover:bg-opacity-10 ${
               selectedOption === i
-                ? "border-teal-400 bg-teal-200 bg-opacity-5 shadow-sm shadow-teal-200"
+                ? "border-teal-400 bg-accent bg-opacity-5 shadow-sm shadow-accent"
                 : ""
             }`}
           >
@@ -108,7 +108,7 @@ function QRGenerator() {
         {QRURL && (
           <div
             ref={qrCodeRef}
-            className="qr p-1 bg-gray-950 border-teal-400 border-2"
+            className="qr p-1 bg-primary border-teal-400 border-2"
           >
             <QRCode
               value={QRURL}
@@ -128,7 +128,7 @@ function QRGenerator() {
               <div className="flex items-center justify-evenly w-full">
                 {QR_THEMES.map((theme, i) => (
                   <button
-                    className={`btn flex  w-12 h-8 items-center justify-center border-teal-500 border-2 rounded-sm hover:border-teal-700 hover:bg-opacity-10 ${
+                    className={`btn flex gap-1 w-12 h-8 items-center justify-center border-teal-500 border-2 rounded-sm hover:border-teal-700 hover:bg-opacity-10 ${
                       selectedTheme === i ? "border-teal-300" : ""
                     }`}
                     onClick={() => setSelectedTheme(i)}
@@ -149,7 +149,7 @@ function QRGenerator() {
               <>
                 <p>Link:</p>
                 <a
-                  className="text-teal-600 border-b border-teal-500 cursor-pointer url hover:border-teal-300"
+                  className="text-teal-400 border-b border-teal-500 cursor-pointer url hover:border-teal-300"
                   target="_blank"
                   href={linkURL}
                 >
@@ -159,13 +159,13 @@ function QRGenerator() {
             </div>
             <div className="flex gap-2">
               <button
-                className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-gray-950 hover:bg-teal-700 hover:border-teal-700"
+                className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-primary hover:bg-teal-700 hover:border-teal-700"
                 onClick={handleDownload}
               >
                 Download
               </button>
               <button
-                className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-gray-950 hover:bg-teal-700 hover:border-teal-700"
+                className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-primary hover:bg-teal-700 hover:border-teal-700"
                 onClick={handleCopy}
               >
                 Copy URL

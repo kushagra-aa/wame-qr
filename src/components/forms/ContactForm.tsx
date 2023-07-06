@@ -38,7 +38,7 @@ function ContactForm({
             First Name <span className="text-red-400 text-sm">*</span>:
           </span>
           <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-full text-primary mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
             name="firstName"
             id="firstName"
@@ -54,7 +54,7 @@ function ContactForm({
             Last Name <span className="text-red-400 text-sm">*</span>:
           </span>
           <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-full text-primary mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
             name="lastName"
             id="lastName"
@@ -70,7 +70,7 @@ function ContactForm({
             Phone Number <span className="text-red-400 text-sm">*</span>:
           </span>
           <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-full text-primary mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
             pattern="(5|6|7|8|9)\d{9}"
             name="phone"
@@ -84,7 +84,7 @@ function ContactForm({
         <label className="flex flex-col justify-end" htmlFor="email">
           <span>Email:</span>
           <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-full text-primary mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             name="email"
             id="email"
             type="email"
@@ -93,7 +93,7 @@ function ContactForm({
         </label>
       </div>
       <button
-        className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-gray-950 hover:bg-teal-700 hover:border-teal-700"
+        className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-primary hover:bg-teal-700 hover:border-teal-700"
         type="submit"
       >
         generate

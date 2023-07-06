@@ -22,7 +22,7 @@ function PhoneForm({
         <label className="flex justify-end gap-1" htmlFor="inputUrl">
           Phone Number:
           <input
-            className="appearance-none bg-transparent border-none w-3/5 text-gray-700 mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
+            className="appearance-none bg-transparent border-none w-3/5 text-primary mr-3 outline-none py-0.5 px-2 cursor-pointer active:text-teal-400 focus:text-teal-400"
             required
             name="inputUrl"
             pattern="(5|6|7|8|9)\d{9}"
@@ -33,7 +33,7 @@ function PhoneForm({
         </label>
       </div>
       <button
-        className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-gray-950 hover:bg-teal-700 hover:border-teal-700"
+        className="flex-shrink-0 px-4 py-1 text-sm font-bold uppercase bg-teal-500 border-4 border-teal-500 rounded text-primary hover:bg-teal-700 hover:border-teal-700"
         type="submit"
       >
         generate
