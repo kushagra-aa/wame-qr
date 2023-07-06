@@ -10,8 +10,15 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Generate custom QR codes for WhatsApp, mobile numbers, contact cards, and URLs. Download and share QR codes easily."
+		/>
+		<meta
+			name="keywords"
+			content="QR code generator, WhatsApp QR code, mobile number QR code, contact card QR code, URL QR code"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -32,6 +39,21 @@ const { title } = Astro.props;
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "QRCode",
+				"name": "QR Code Generator",
+				"description": "Generate custom QR codes for WhatsApp, mobile numbers, contact cards, and URLs.",
+				"image": "https://wame-qr.netlify.app/hero.png",
+				"url": "https://wame-qr.netlify.app/",
+				"potentialAction": {
+					"@type": "ViewAction",
+					"target": "https://wame-qr.netlify.app/play",
+					"name": "Try It Out"
+				}
+			}
+		</script>
 	</head>
 	<body class="bg-gray-950">
 		<slot />
